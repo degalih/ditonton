@@ -5,6 +5,8 @@ import 'package:core/presentation/pages/now_playing_movie_page.dart';
 import 'package:core/presentation/pages/on_the_air_tv_series_page.dart';
 import 'package:core/presentation/pages/popular_movies_page.dart';
 import 'package:core/presentation/pages/popular_tv_series_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:search/bloc/search_bloc.dart';
 import 'package:search/search.dart';
 import 'package:core/presentation/pages/top_rated_movies_page.dart';
 import 'package:core/presentation/pages/top_rated_tv_series_page.dart';
@@ -85,6 +87,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<TvSeriesSearchNotifier>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<SearchBloc>(),
         ),
       ],
       child: MaterialApp(
