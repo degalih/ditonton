@@ -1,11 +1,11 @@
-import 'package:about/about_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/presentation/pages/popular_tv_series_page.dart';
-import 'package:core/presentation/pages/search_tv_series_page.dart';
+
 import 'package:core/presentation/pages/top_rated_tv_series_page.dart';
 import 'package:core/presentation/pages/tv_series_detail_page.dart';
 import 'package:core/presentation/pages/watchlist_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
+import 'package:core/utils/routes.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -79,7 +79,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
             ),
             ListTile(
               onTap: () {
-                Navigator.pushNamed(context, AboutPage.ROUTE_NAME);
+                Navigator.pushNamed(context, ABOUT_ROUTE);
               },
               leading: Icon(Icons.info_outline),
               title: Text('About'),
@@ -92,7 +92,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SearchTvSeriesPage.ROUTE_NAME);
+              Navigator.pushNamed(context, SEARCH_TV_SERIES_ROUTE);
             },
             icon: Icon(Icons.search),
           )
