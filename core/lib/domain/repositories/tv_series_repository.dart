@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/utils/failure.dart';
-import 'package:ditonton/domain/entities/tv.dart';
-import 'package:ditonton/domain/entities/tv_series_detail.dart';
+
+import '../../utils/failure.dart';
+import '../entities/tv.dart';
+import '../entities/tv_series_detail.dart';
 
 abstract class TvSeriesRepository {
   Future<Either<Failure, List<Tv>>> getOnTheAirTvSeries();

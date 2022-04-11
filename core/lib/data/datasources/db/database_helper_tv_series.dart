@@ -1,6 +1,7 @@
 import 'dart:async';
-import 'package:ditonton/data/models/tv_series_table.dart';
 import 'package:sqflite/sqflite.dart';
+
+import '../../models/tv_series_table.dart';
 
 class DatabaseHelperTvSeries {
   static DatabaseHelperTvSeries? _databaseHelper;
@@ -15,9 +16,7 @@ class DatabaseHelperTvSeries {
   static Database? _database;
 
   Future<Database?> get database async {
-    if (_database == null) {
-      _database = await _initDb();
-    }
+    _database ??= await _initDb();
     return _database;
   }
 

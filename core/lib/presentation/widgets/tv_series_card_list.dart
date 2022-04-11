@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/utils/constants.dart';
-import 'package:ditonton/domain/entities/tv.dart';
-import 'package:ditonton/presentation/pages/tv_series_detail_page.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/entities/tv.dart';
+import '../../styles/text_styles.dart';
+import '../../utils/constants.dart';
+import '../pages/tv_series_detail_page.dart';
 
 class TvSeriesCard extends StatelessWidget {
   final Tv tv;

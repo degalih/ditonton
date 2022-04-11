@@ -1,19 +1,22 @@
+import 'package:about/about_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/utils/constants.dart';
-import 'package:ditonton/utils/state_enum.dart';
-import 'package:ditonton/domain/entities/tv.dart';
-import 'package:about/about.dart';
-import 'package:ditonton/presentation/pages/home_movie_page.dart';
-import 'package:ditonton/presentation/pages/on_the_air_tv_series_page.dart';
-import 'package:ditonton/presentation/pages/popular_tv_series_page.dart';
-import 'package:ditonton/presentation/pages/search_tv_series_page.dart';
-import 'package:ditonton/presentation/pages/top_rated_tv_series_page.dart';
-import 'package:ditonton/presentation/pages/tv_series_detail_page.dart';
-import 'package:ditonton/presentation/pages/watchlist_movies_page.dart';
-import 'package:ditonton/presentation/pages/watchlist_tv_series_page.dart';
-import 'package:ditonton/presentation/provider/tv_list_notifier.dart';
+import 'package:core/presentation/pages/popular_tv_series_page.dart';
+import 'package:core/presentation/pages/search_tv_series_page.dart';
+import 'package:core/presentation/pages/top_rated_tv_series_page.dart';
+import 'package:core/presentation/pages/tv_series_detail_page.dart';
+import 'package:core/presentation/pages/watchlist_movies_page.dart';
+import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../domain/entities/tv.dart';
+import '../../styles/text_styles.dart';
+import '../../utils/constants.dart';
+import '../../utils/state_enum.dart';
+import '../provider/tv_list_notifier.dart';
+import 'home_movie_page.dart';
+import 'on_the_air_tv_series_page.dart';
 
 class HomeTvPage extends StatefulWidget {
   static const ROUTE_NAME = '/tv-series';

@@ -1,19 +1,21 @@
+import 'package:about/about_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/utils/constants.dart';
-import 'package:ditonton/utils/state_enum.dart';
-import 'package:ditonton/domain/entities/movie.dart';
-import 'package:about/about.dart';
-import 'package:ditonton/presentation/pages/home_tv_page.dart';
-import 'package:ditonton/presentation/pages/movie_detail_page.dart';
-import 'package:ditonton/presentation/pages/now_playing_movie_page.dart';
-import 'package:ditonton/presentation/pages/popular_movies_page.dart';
-import 'package:ditonton/presentation/pages/search_page.dart';
-import 'package:ditonton/presentation/pages/top_rated_movies_page.dart';
-import 'package:ditonton/presentation/pages/watchlist_movies_page.dart';
-import 'package:ditonton/presentation/pages/watchlist_tv_series_page.dart';
-import 'package:ditonton/presentation/provider/movie_list_notifier.dart';
+import 'package:core/presentation/pages/popular_movies_page.dart';
+import 'package:core/presentation/pages/search_page.dart';
+import 'package:core/presentation/pages/top_rated_movies_page.dart';
+import 'package:core/presentation/pages/watchlist_movies_page.dart';
+import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../domain/entities/movie.dart';
+import '../../styles/text_styles.dart';
+import '../../utils/constants.dart';
+import '../../utils/state_enum.dart';
+import '../provider/movie_list_notifier.dart';
+import 'home_tv_page.dart';
+import 'movie_detail_page.dart';
+import 'now_playing_movie_page.dart';
 
 class HomeMoviePage extends StatefulWidget {
   static const ROUTE_NAME = '/movies';

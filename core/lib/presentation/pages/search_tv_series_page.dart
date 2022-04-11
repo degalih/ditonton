@@ -1,10 +1,11 @@
-import 'package:ditonton/utils/state_enum.dart';
-import 'package:ditonton/presentation/provider/tv_series_search_notifier.dart';
-import 'package:ditonton/presentation/widgets/tv_series_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../styles/text_styles.dart';
 import '../../utils/constants.dart';
+import '../../utils/state_enum.dart';
+import '../provider/tv_series_search_notifier.dart';
+import '../widgets/tv_series_card_list.dart';
 
 class SearchTvSeriesPage extends StatelessWidget {
   static const ROUTE_NAME = '/tv-series/search';

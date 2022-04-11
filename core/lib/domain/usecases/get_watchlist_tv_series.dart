@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/utils/failure.dart';
-import 'package:ditonton/domain/entities/tv.dart';
-import 'package:ditonton/domain/repositories/tv_series_repository.dart';
+
+import '../../utils/failure.dart';
+import '../entities/tv.dart';
+import '../repositories/tv_series_repository.dart';
 
 class GetWatchlistTvSeries {
   final TvSeriesRepository _repository;

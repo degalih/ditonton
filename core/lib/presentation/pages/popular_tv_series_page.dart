@@ -1,8 +1,10 @@
-import 'package:ditonton/utils/state_enum.dart';
-import 'package:ditonton/presentation/provider/popular_tv_series_notifier.dart';
-import 'package:ditonton/presentation/widgets/tv_series_card_list.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../utils/state_enum.dart';
+import '../provider/popular_tv_series_notifier.dart';
+import '../widgets/tv_series_card_list.dart';
 
 class PopularTvSeriesPage extends StatefulWidget {
   static const ROUTE_NAME = '/tv-series/popular';

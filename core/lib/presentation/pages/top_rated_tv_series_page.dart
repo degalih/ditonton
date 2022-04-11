@@ -1,8 +1,9 @@
-import 'package:ditonton/utils/state_enum.dart';
-import 'package:ditonton/presentation/provider/top_rated_tv_series_notifier.dart';
-import 'package:ditonton/presentation/widgets/tv_series_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../../utils/state_enum.dart';
+import '../provider/top_rated_tv_series_notifier.dart';
+import '../widgets/tv_series_card_list.dart';
 
 class TopRatedTvSeriesPage extends StatefulWidget {
   static const ROUTE_NAME = '/tv-series/top-rated';

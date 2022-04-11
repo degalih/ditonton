@@ -1,4 +1,5 @@
-import 'package:ditonton/domain/repositories/tv_series_repository.dart';
+
+import '../repositories/tv_series_repository.dart';
 
 class GetWatchListStatusTvSeries {
   final TvSeriesRepository repository;
