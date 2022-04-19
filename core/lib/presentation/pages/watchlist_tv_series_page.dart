@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,8 +7,6 @@ import '../provider/watchlist_tv_series_notifier.dart';
 import '../widgets/tv_series_card_list.dart';
 
 class WatchlistTvSeriesPage extends StatefulWidget {
-  static const ROUTE_NAME = '/tv-series/watchlist';
-
   @override
   _WatchlistTvSeriesPageState createState() => _WatchlistTvSeriesPageState();
 }
@@ -38,9 +35,6 @@ class _WatchlistTvSeriesPageState extends State<WatchlistTvSeriesPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Watchlist TV Series'),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Consumer<WatchlistTvSeriesNotifier>(

@@ -4,7 +4,6 @@ import '../../utils/failure.dart';
 import '../entities/movie_detail.dart';
 import '../repositories/movie_repository.dart';
 
-
 class RemoveWatchlist {
   final MovieRepository repository;
 

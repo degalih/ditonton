@@ -4,7 +4,6 @@ import '../../utils/failure.dart';
 import '../entities/movie.dart';
 import '../repositories/movie_repository.dart';
 
-
 class GetWatchlistMovies {
   final MovieRepository _repository;
 

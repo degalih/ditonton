@@ -1,12 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/presentation/pages/popular_tv_series_page.dart';
-
 import 'package:core/presentation/pages/top_rated_tv_series_page.dart';
 import 'package:core/presentation/pages/tv_series_detail_page.dart';
-import 'package:core/presentation/pages/watchlist_movies_page.dart';
-import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
+import 'package:core/presentation/pages/watchlist_page.dart';
 import 'package:core/utils/routes.dart';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -64,17 +61,10 @@ class _HomeTvPageState extends State<HomeTvPage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.save_alt),
-              title: Text('Watchlist Movies'),
+              leading: Icon(Icons.bookmark),
+              title: Text('Watchlist'),
               onTap: () {
-                Navigator.pushNamed(context, WatchlistMoviesPage.ROUTE_NAME);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.book_rounded),
-              title: Text('Watchlist TV Series'),
-              onTap: () {
-                Navigator.pushNamed(context, WatchlistTvSeriesPage.ROUTE_NAME);
+                Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
               },
             ),
             ListTile(

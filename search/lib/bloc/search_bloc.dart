@@ -18,10 +18,10 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       final result = await _searchMovies.execute(query);
 
       result.fold(
-            (failure) {
+        (failure) {
           emit(SearchError(failure.message));
         },
-            (data) {
+        (data) {
           emit(SearchHasData(data));
         },
       );

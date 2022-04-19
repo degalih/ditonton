@@ -48,7 +48,7 @@ final locator = GetIt.instance;
 
 void init() {
   locator.registerFactory(
-        () => SearchBloc(
+    () => SearchBloc(
       locator(),
     ),
   );

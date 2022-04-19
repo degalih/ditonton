@@ -25,10 +25,10 @@ class DatabaseHelper {
     final databasePath = '$path/ditonton.db';
 
     var db = await openDatabase(
-        databasePath,
-        version: 1,
-        onCreate: _onCreate,
-    password: encrypt('123456'),
+      databasePath,
+      version: 1,
+      onCreate: _onCreate,
+      password: encrypt('123456'),
     );
     return db;
   }

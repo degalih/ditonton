@@ -1,4 +1,3 @@
-
 import 'package:core/domain/entities/tv.dart';
 import 'package:core/utils/state_enum.dart';
 import 'package:flutter/foundation.dart';
