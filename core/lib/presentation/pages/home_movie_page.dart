@@ -3,6 +3,7 @@ import 'package:core/presentation/pages/popular_movies_page.dart';
 import 'package:core/presentation/pages/top_rated_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:core/utils/routes.dart';
@@ -89,6 +90,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         actions: [
           IconButton(
             onPressed: () {
+              FirebaseCrashlytics.instance.crash();
               Navigator.pushNamed(context, SEARCH_ROUTE);
             },
             icon: Icon(Icons.search),

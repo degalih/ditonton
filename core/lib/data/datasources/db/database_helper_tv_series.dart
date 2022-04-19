@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:sqflite/sqflite.dart';
-
+import 'package:core/core.dart';
+import 'package:sqflite_sqlcipher/sqflite.dart';
 import '../../models/tv_series_table.dart';
 
 class DatabaseHelperTvSeries {
@@ -26,7 +26,12 @@ class DatabaseHelperTvSeries {
     final path = await getDatabasesPath();
     final databasePath = '$path/ditonton_tvseries.db';
 
-    var db = await openDatabase(databasePath, version: 1, onCreate: _onCreate);
+    var db = await openDatabase(
+        databasePath,
+        version: 1,
+        onCreate: _onCreate,
+      password: encrypt('123456'),
+    );
     return db;
   }
 
