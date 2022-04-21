@@ -29,7 +29,8 @@ import 'package:core/domain/usecases/save_watchlist_tv_series.dart';
 import 'package:core/presentation/provider/movie_detail_notifier.dart';
 import 'package:core/presentation/provider/movie_list_notifier.dart';
 import 'package:search/bloc/movies/search_bloc.dart';
-import 'package:search/bloc/search_bloc.dart';
+import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
+
 import 'package:search/search.dart';
 import 'package:core/presentation/provider/now_playing_movies_notifier.dart';
 import 'package:core/presentation/provider/on_the_air_tv_series_notifier.dart';
@@ -55,8 +56,8 @@ void init() {
   );
   // provider | Tv Series
   locator.registerFactory(
-    () => TvSeriesSearchNotifier(
-      searchTvSeries: locator(),
+    () => SearchTvSeriesBloc(
+      locator(),
     ),
   );
 
@@ -119,11 +120,7 @@ void init() {
       removeWatchlist: locator(),
     ),
   );
-  locator.registerFactory(
-    () => MovieSearchNotifier(
-      searchMovies: locator(),
-    ),
-  );
+
   locator.registerFactory(
     () => NowPlayingMoviesNotifier(
       locator(),

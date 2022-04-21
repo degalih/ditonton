@@ -1,10 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:core/domain/entities/movie.dart';
 import 'package:equatable/equatable.dart';
+import 'package:search/domain/usecases/search_movies.dart';
 
-import '../../domain/usecases/search_movies.dart';
-
-part 'movies/search_event.dart';
+part 'search_event.dart';
 part 'search_state.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
