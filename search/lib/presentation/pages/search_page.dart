@@ -3,7 +3,7 @@ import 'package:core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import '../../bloc/search_bloc.dart';
+import '../../bloc/movies/search_bloc.dart';
 
 class SearchPage extends StatelessWidget {
   static const ROUTE_NAME = '/movies/search';
