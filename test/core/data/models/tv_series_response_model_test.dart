@@ -30,7 +30,7 @@ void main() {
     test('should return a valid model from JSON', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('dummy_data/tv_series/on_the_air.json'));
+          json.decode(readJson('core/dummy_data/tv_series/on_the_air.json'));
       // act
       final result = TvSeriesResponse.fromJson(jsonMap);
       // assert
