@@ -1,8 +1,9 @@
-import 'package:core/presentation/widgets/tv_series_card_list.dart';
+import 'package:tv_series/presentation/widgets/tv_series_card_list.dart';
 import 'package:core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
+import 'package:tv_series/presentation/widgets/tv_series_card_list.dart';
 
 class SearchTvSeriesPage extends StatelessWidget {
   static const ROUTE_NAME = '/tv-series/search';

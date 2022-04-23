@@ -5,15 +5,15 @@
 import 'dart:async' as _i11;
 import 'dart:ui' as _i12;
 
-import 'package:core/domain/entities/tv.dart' as _i10;
-import 'package:core/domain/entities/tv_series_detail.dart' as _i7;
-import 'package:core/domain/usecases/get_tv_series_detail.dart' as _i2;
-import 'package:core/domain/usecases/get_tv_series_recommendations.dart' as _i3;
-import 'package:core/domain/usecases/get_watchlist_status_tv_series.dart'
+import 'package:tv_series/domain/entities/tv.dart' as _i10;
+import 'package:tv_series/domain/entities/tv_series_detail.dart' as _i7;
+import 'package:tv_series/domain/usecases/get_tv_series_detail.dart' as _i2;
+import 'package:tv_series/domain/usecases/get_tv_series_recommendations.dart' as _i3;
+import 'package:tv_series/domain/usecases/get_watchlist_status_tv_series.dart'
     as _i4;
-import 'package:core/domain/usecases/remove_watchlist_tv_series.dart' as _i6;
-import 'package:core/domain/usecases/save_watchlist_tv_series.dart' as _i5;
-import 'package:core/presentation/provider/tv_series_detail_notifier.dart'
+import 'package:tv_series/domain/usecases/remove_watchlist_tv_series.dart' as _i6;
+import 'package:tv_series/domain/usecases/save_watchlist_tv_series.dart' as _i5;
+import 'package:tv_series/presentation/provider/tv_series_detail_notifier.dart'
     as _i8;
 import 'package:core/utils/state_enum.dart' as _i9;
 import 'package:mockito/mockito.dart' as _i1;

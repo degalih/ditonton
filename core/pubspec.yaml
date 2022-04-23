@@ -23,8 +23,6 @@ dependencies:
   sqflite_sqlcipher: ^2.1.0
   encrypt: ^5.0.1
   firebase_crashlytics: ^2.6.2
-  movies:
-    path: ../movies
 
 dev_dependencies:
   mockito: ^5.0.8

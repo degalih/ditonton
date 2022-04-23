@@ -36,6 +36,8 @@ dependencies:
     path: search
   movies:
     path: movies
+  tv_series:
+    path: tv_series
   firebase_core: ^1.14.1
   firebase_crashlytics: ^2.6.2
 

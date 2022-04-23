@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:core/domain/entities/tv.dart';
+import 'package:tv_series/domain/entities/tv.dart';
 import 'package:equatable/equatable.dart';
 import 'package:search/search.dart';
 

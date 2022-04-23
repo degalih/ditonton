@@ -1,15 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:core/presentation/pages/home_tv_page.dart';
 import 'package:movies/presentation/pages/popular_movies_page.dart';
 import 'package:movies/presentation/pages/top_rated_movies_page.dart';
-import 'package:core/presentation/pages/watchlist_page.dart';
 import 'package:core/styles/text_styles.dart';
 import 'package:core/utils/constants.dart';
 import 'package:core/utils/routes.dart';
 import 'package:core/utils/state_enum.dart';
 import 'package:flutter/material.dart';
-import 'package:movies/presentation/pages/popular_movies_page.dart';
-import 'package:movies/presentation/pages/top_rated_movies_page.dart';
 import 'package:provider/provider.dart';
 import '../../domain/entities/movie.dart';
 import '../provider/movie_list_notifier.dart';
@@ -58,14 +54,14 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               leading: Icon(Icons.tv_rounded),
               title: Text('TV Series'),
               onTap: () {
-                Navigator.pushReplacementNamed(context, HomeTvPage.ROUTE_NAME);
+                Navigator.pushReplacementNamed(context, HOME_TV_SERIES_ROUTE);
               },
             ),
             ListTile(
               leading: Icon(Icons.bookmark),
               title: Text('Watchlist'),
               onTap: () {
-                Navigator.pushNamed(context, WatchlistPage.ROUTE_NAME);
+                Navigator.pushNamed(context, WATCHLIST_PAGE_ROUTE);
               },
             ),
             ListTile(

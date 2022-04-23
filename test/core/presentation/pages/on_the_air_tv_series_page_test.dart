@@ -1,7 +1,7 @@
 import 'package:core/utils/state_enum.dart';
-import 'package:core/domain/entities/tv.dart';
-import 'package:core/presentation/pages/on_the_air_tv_series_page.dart';
-import 'package:core/presentation/provider/on_the_air_tv_series_notifier.dart';
+import 'package:tv_series/domain/entities/tv.dart';
+import 'package:tv_series/presentation/pages/on_the_air_tv_series_page.dart';
+import 'package:tv_series/presentation/provider/on_the_air_tv_series_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';

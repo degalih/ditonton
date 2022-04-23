@@ -6,9 +6,9 @@ import 'dart:async' as _i6;
 import 'dart:convert' as _i14;
 import 'dart:typed_data' as _i15;
 
-import 'package:core/domain/entities/tv.dart' as _i11;
-import 'package:core/domain/entities/tv_series_detail.dart' as _i12;
-import 'package:core/domain/repositories/tv_series_repository.dart' as _i10;
+import 'package:tv_series/domain/entities/tv.dart' as _i11;
+import 'package:tv_series/domain/entities/tv_series_detail.dart' as _i12;
+import 'package:tv_series/domain/repositories/tv_series_repository.dart' as _i10;
 import 'package:core/utils/failure.dart' as _i7;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:http/src/base_request.dart' as _i16;
