@@ -1,6 +1,6 @@
-import 'package:core/presentation/pages/watchlist_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
 import 'package:flutter/material.dart';
+import 'package:movies/presentation/pages/watchlist_movies_page.dart';
 
 class WatchlistPage extends StatelessWidget {
   static const ROUTE_NAME = '/watchlist';

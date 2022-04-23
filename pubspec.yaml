@@ -34,6 +34,8 @@ dependencies:
     path: core
   search:
     path: search
+  movies:
+    path: movies
   firebase_core: ^1.14.1
   firebase_crashlytics: ^2.6.2
 

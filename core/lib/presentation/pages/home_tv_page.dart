@@ -5,6 +5,7 @@ import 'package:core/presentation/pages/tv_series_detail_page.dart';
 import 'package:core/presentation/pages/watchlist_page.dart';
 import 'package:core/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:movies/presentation/pages/home_movie_page.dart';
 import 'package:provider/provider.dart';
 
 import '../../domain/entities/tv.dart';
@@ -12,7 +13,6 @@ import '../../styles/text_styles.dart';
 import '../../utils/constants.dart';
 import '../../utils/state_enum.dart';
 import '../provider/tv_list_notifier.dart';
-import 'home_movie_page.dart';
 import 'on_the_air_tv_series_page.dart';
 
 class HomeTvPage extends StatefulWidget {
