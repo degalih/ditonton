@@ -185,13 +185,13 @@ void init() {
 
   // data sources | Tv Series
   locator.registerLazySingleton<TvSeriesRemoteDataSource>(
-      () => TvSeriesRemoteDataSourceImpl(client: locator()));
+      () => TvSeriesRemoteDataSourceImpl(httpClient: locator()));
   locator.registerLazySingleton<TvSeriesLocalDataSource>(
       () => TvSeriesLocalDataSourceImpl(databaseHelper: locator()));
 
   // data sources | Movie
   locator.registerLazySingleton<MovieRemoteDataSource>(
-      () => MovieRemoteDataSourceImpl(client: locator()));
+      () => MovieRemoteDataSourceImpl(httpClient: locator()));
   locator.registerLazySingleton<MovieLocalDataSource>(
       () => MovieLocalDataSourceImpl(databaseHelper: locator()));
 
