@@ -1,6 +1,6 @@
-import 'package:tv_series/domain/usecases/get_watchlist_status_tv_series.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';
 
 import '../../helpers/test_helper.mocks.dart';
 

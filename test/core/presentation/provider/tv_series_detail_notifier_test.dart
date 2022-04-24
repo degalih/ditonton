@@ -4,13 +4,13 @@ import 'package:core/utils/state_enum.dart';
 import 'package:tv_series/domain/entities/tv.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_detail.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_recommendations.dart';
-import 'package:tv_series/domain/usecases/get_watchlist_status_tv_series.dart';
-import 'package:tv_series/domain/usecases/remove_watchlist_tv_series.dart';
-import 'package:tv_series/domain/usecases/save_watchlist_tv_series.dart';
 import 'package:tv_series/presentation/provider/tv_series_detail_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/remove_watchlist_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/save_watchlist_tv_series.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 import 'tv_series_detail_notifier_test.mocks.dart';

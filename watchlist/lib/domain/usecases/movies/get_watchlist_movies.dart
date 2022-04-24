@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
-import '../entities/movie.dart';
-import '../repositories/movie_repository.dart';
+
 import 'package:core/utils/failure.dart';
+import 'package:movies/domain/entities/movie.dart';
+import 'package:movies/domain/repositories/movie_repository.dart';
 
 class GetWatchlistMovies {
   final MovieRepository _repository;

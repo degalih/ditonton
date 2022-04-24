@@ -5,11 +5,11 @@ import 'package:core/utils/state_enum.dart';
 import 'package:tv_series/presentation/pages/popular_tv_series_page.dart';
 import 'package:tv_series/presentation/pages/top_rated_tv_series_page.dart';
 import 'package:tv_series/presentation/pages/tv_series_detail_page.dart';
-import 'package:tv_series/presentation/pages/watchlist_page.dart';
 import 'package:core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:movies/presentation/pages/home_movie_page.dart';
 import 'package:provider/provider.dart';
+import 'package:watchlist/presentation/pages/watchlist_page.dart';
 
 import '../../domain/entities/tv.dart';
 import '../provider/tv_list_notifier.dart';

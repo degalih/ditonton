@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:tv_series/domain/usecases/save_watchlist_tv_series.dart';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:watchlist/domain/usecases/tv_series/save_watchlist_tv_series.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';

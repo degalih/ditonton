@@ -3,14 +3,14 @@ import 'package:movies/domain/entities/movie.dart';
 import 'package:movies/domain/usecases/get_movie_detail.dart';
 import 'package:movies/domain/usecases/get_movie_recommendations.dart';
 import 'package:core/utils/failure.dart';
-import 'package:movies/domain/usecases/get_watchlist_status.dart';
-import 'package:movies/domain/usecases/remove_watchlist.dart';
-import 'package:movies/domain/usecases/save_watchlist.dart';
 import 'package:movies/presentation/provider/movie_detail_notifier.dart';
 import 'package:core/utils/state_enum.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:watchlist/domain/usecases/movies/get_watchlist_status.dart';
+import 'package:watchlist/domain/usecases/movies/remove_watchlist.dart';
+import 'package:watchlist/domain/usecases/movies/save_watchlist.dart';
 
 import '../../../core/dummy_data/dummy_objects.dart';
 import 'movie_detail_notifier_test.mocks.dart';

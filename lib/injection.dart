@@ -18,14 +18,6 @@ import 'package:movies/domain/usecases/get_top_rated_movies.dart';
 import 'package:tv_series/domain/usecases/get_top_rated_tv_series.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_detail.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_recommendations.dart';
-import 'package:movies/domain/usecases/get_watchlist_movies.dart';
-import 'package:movies/domain/usecases/get_watchlist_status.dart';
-import 'package:tv_series/domain/usecases/get_watchlist_status_tv_series.dart';
-import 'package:tv_series/domain/usecases/get_watchlist_tv_series.dart';
-import 'package:movies/domain/usecases/remove_watchlist.dart';
-import 'package:tv_series/domain/usecases/remove_watchlist_tv_series.dart';
-import 'package:movies/domain/usecases/save_watchlist.dart';
-import 'package:tv_series/domain/usecases/save_watchlist_tv_series.dart';
 import 'package:movies/presentation/provider/movie_detail_notifier.dart';
 import 'package:movies/presentation/provider/movie_list_notifier.dart';
 import 'package:search/bloc/movies/search_bloc.dart';
@@ -41,10 +33,19 @@ import 'package:tv_series/presentation/provider/top_rated_tv_series_notifier.dar
 import 'package:tv_series/presentation/provider/tv_list_notifier.dart';
 import 'package:tv_series/presentation/provider/tv_series_detail_notifier.dart';
 
-import 'package:movies/presentation/provider/watchlist_movie_notifier.dart';
-import 'package:tv_series/presentation/provider/watchlist_tv_series_notifier.dart';
+
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
+import 'package:watchlist/domain/usecases/movies/get_watchlist_movies.dart';
+import 'package:watchlist/domain/usecases/movies/get_watchlist_status.dart';
+import 'package:watchlist/domain/usecases/movies/remove_watchlist.dart';
+import 'package:watchlist/domain/usecases/movies/save_watchlist.dart';
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/remove_watchlist_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/save_watchlist_tv_series.dart';
+import 'package:watchlist/presentation/watchlist_movie_notifier.dart';
+import 'package:watchlist/presentation/watchlist_tv_series_notifier.dart';
 
 final locator = GetIt.instance;
 

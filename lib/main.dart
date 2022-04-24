@@ -9,7 +9,6 @@ import 'package:tv_series/presentation/pages/popular_tv_series_page.dart';
 import 'package:movies/presentation/pages/top_rated_movies_page.dart';
 import 'package:tv_series/presentation/pages/top_rated_tv_series_page.dart';
 import 'package:tv_series/presentation/pages/tv_series_detail_page.dart';
-import 'package:tv_series/presentation/pages/watchlist_page.dart';
 import 'package:movies/presentation/provider/movie_detail_notifier.dart';
 import 'package:movies/presentation/provider/movie_list_notifier.dart';
 import 'package:movies/presentation/provider/now_playing_movies_notifier.dart';
@@ -20,8 +19,6 @@ import 'package:movies/presentation/provider/top_rated_movies_notifier.dart';
 import 'package:tv_series/presentation/provider/top_rated_tv_series_notifier.dart';
 import 'package:tv_series/presentation/provider/tv_list_notifier.dart';
 import 'package:tv_series/presentation/provider/tv_series_detail_notifier.dart';
-import 'package:movies/presentation/provider/watchlist_movie_notifier.dart';
-import 'package:tv_series/presentation/provider/watchlist_tv_series_notifier.dart';
 import 'package:core/styles/colors.dart';
 import 'package:core/styles/text_styles.dart';
 import 'package:core/utils/utils.dart';
@@ -35,6 +32,9 @@ import 'package:search/bloc/movies/search_bloc.dart';
 import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
 
 import 'package:search/search.dart';
+import 'package:watchlist/presentation/pages/watchlist_page.dart';
+import 'package:watchlist/presentation/watchlist_movie_notifier.dart';
+import 'package:watchlist/presentation/watchlist_tv_series_notifier.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

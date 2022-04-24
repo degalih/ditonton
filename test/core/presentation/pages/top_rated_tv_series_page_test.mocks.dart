@@ -5,12 +5,12 @@
 import 'dart:async' as _i6;
 import 'dart:ui' as _i7;
 
+import 'package:core/utils/state_enum.dart' as _i4;
+import 'package:mockito/mockito.dart' as _i1;
 import 'package:tv_series/domain/entities/tv.dart' as _i5;
 import 'package:tv_series/domain/usecases/get_top_rated_tv_series.dart' as _i2;
 import 'package:tv_series/presentation/provider/top_rated_tv_series_notifier.dart'
     as _i3;
-import 'package:core/utils/state_enum.dart' as _i4;
-import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

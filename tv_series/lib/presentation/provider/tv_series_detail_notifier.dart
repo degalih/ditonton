@@ -1,13 +1,13 @@
 import 'package:core/utils/state_enum.dart';
 import 'package:flutter/foundation.dart';
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/remove_watchlist_tv_series.dart';
+import 'package:watchlist/domain/usecases/tv_series/save_watchlist_tv_series.dart';
 
 import '../../domain/entities/tv.dart';
 import '../../domain/entities/tv_series_detail.dart';
 import '../../domain/usecases/get_tv_series_detail.dart';
 import '../../domain/usecases/get_tv_series_recommendations.dart';
-import '../../domain/usecases/get_watchlist_status_tv_series.dart';
-import '../../domain/usecases/remove_watchlist_tv_series.dart';
-import '../../domain/usecases/save_watchlist_tv_series.dart';
 
 
 class TvSeriesDetailNotifier extends ChangeNotifier {

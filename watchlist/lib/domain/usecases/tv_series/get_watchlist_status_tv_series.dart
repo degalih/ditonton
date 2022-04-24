@@ -1,4 +1,6 @@
-import '../repositories/tv_series_repository.dart';
+
+
+import 'package:tv_series/domain/repositories/tv_series_repository.dart';
 
 class GetWatchListStatusTvSeries {
   final TvSeriesRepository repository;

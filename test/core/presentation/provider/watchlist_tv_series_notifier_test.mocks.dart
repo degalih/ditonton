@@ -4,11 +4,12 @@
 
 import 'dart:async' as _i4;
 
-import 'package:tv_series/domain/entities/tv.dart' as _i6;
-import 'package:tv_series/domain/usecases/get_watchlist_tv_series.dart' as _i3;
 import 'package:core/utils/failure.dart' as _i5;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:tv_series/domain/entities/tv.dart' as _i6;
+import 'package:watchlist/domain/usecases/tv_series/get_watchlist_tv_series.dart'
+    as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
