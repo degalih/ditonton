@@ -3,7 +3,7 @@ import 'package:core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:movies/presentation/widgets/movie_card_list.dart';
 import 'package:provider/provider.dart';
-import '../watchlist_movie_notifier.dart';
+import '../provider/watchlist_movie_notifier.dart';
 
 
 class WatchlistMoviesPage extends StatefulWidget {

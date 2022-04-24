@@ -44,8 +44,8 @@ import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_seri
 import 'package:watchlist/domain/usecases/tv_series/get_watchlist_tv_series.dart';
 import 'package:watchlist/domain/usecases/tv_series/remove_watchlist_tv_series.dart';
 import 'package:watchlist/domain/usecases/tv_series/save_watchlist_tv_series.dart';
-import 'package:watchlist/presentation/watchlist_movie_notifier.dart';
-import 'package:watchlist/presentation/watchlist_tv_series_notifier.dart';
+import 'package:watchlist/presentation/provider/watchlist_movie_notifier.dart';
+import 'package:watchlist/presentation/provider/watchlist_tv_series_notifier.dart';
 
 final locator = GetIt.instance;
 

@@ -33,8 +33,8 @@ import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
 
 import 'package:search/search.dart';
 import 'package:watchlist/presentation/pages/watchlist_page.dart';
-import 'package:watchlist/presentation/watchlist_movie_notifier.dart';
-import 'package:watchlist/presentation/watchlist_tv_series_notifier.dart';
+import 'package:watchlist/presentation/provider/watchlist_movie_notifier.dart';
+import 'package:watchlist/presentation/provider/watchlist_tv_series_notifier.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

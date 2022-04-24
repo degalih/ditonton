@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tv_series/presentation/widgets/tv_series_card_list.dart';
 
-import '../watchlist_tv_series_notifier.dart';
+import '../provider/watchlist_tv_series_notifier.dart';
 
 class WatchlistTvSeriesPage extends StatefulWidget {
   @override

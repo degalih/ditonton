@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:watchlist/domain/usecases/tv_series/get_watchlist_tv_series.dart';
-import 'package:watchlist/presentation/watchlist_tv_series_notifier.dart';
+import 'package:watchlist/presentation/provider/watchlist_tv_series_notifier.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 import 'watchlist_tv_series_notifier_test.mocks.dart';
