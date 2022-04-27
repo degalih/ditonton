@@ -108,7 +108,7 @@ void main() {
     });
 
     test(
-        'should change recommendation TV Series when data is gotten successfully',
+        'should change recommendations TV Series when data is gotten successfully',
         () async {
       // arrange
       _arrangeUsecase();
@@ -131,7 +131,7 @@ void main() {
       expect(provider.tvSeriesRecommendations, tTvSeries);
     });
 
-    test('should update recommendation state when data is gotten successfully',
+    test('should update recommendations state when data is gotten successfully',
         () async {
       // arrange
       _arrangeUsecase();

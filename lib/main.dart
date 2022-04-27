@@ -7,9 +7,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/presentation/bloc/detail/movie_detail_bloc.dart';
+import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dart';
+import 'package:movies/presentation/bloc/popular/popular_movies_bloc.dart';
+import 'package:movies/presentation/bloc/recommendations/movie_recommendations_bloc.dart';
+import 'package:movies/presentation/bloc/top_rated/top_rated_movies_bloc.dart';
 import 'package:movies/presentation/pages/home_movie_page.dart';
 import 'package:movies/presentation/pages/movie_detail_page.dart';
-import 'package:movies/presentation/pages/now_playing_movie_page.dart';
+import 'package:movies/presentation/pages/now_playing_movies_page.dart';
 import 'package:movies/presentation/pages/popular_movies_page.dart';
 import 'package:movies/presentation/pages/top_rated_movies_page.dart';
 import 'package:movies/presentation/provider/movie_detail_notifier.dart';
@@ -95,8 +100,24 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (_) => di.locator<WatchlistMoviesBloc>(),
-        ),        BlocProvider(
+        ),
+        BlocProvider(
           create: (_) => di.locator<WatchlistTvSeriesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<NowPlayingMoviesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<PopularMoviesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TopRatedMoviesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<MovieDetailBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<MovieRecommendationsBloc>(),
         ),
       ],
       child: MaterialApp(

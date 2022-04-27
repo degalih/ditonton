@@ -44,6 +44,7 @@ dependencies:
   firebase_crashlytics: ^2.6.2
 
 dev_dependencies:
+  mocktail: ^0.3.0
   mockito: ^5.0.8
   build_runner: ^2.0.4
   flutter_test:

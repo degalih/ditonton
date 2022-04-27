@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import '../../domain/entities/movie.dart';
 import '../provider/movie_list_notifier.dart';
 import 'movie_detail_page.dart';
-import 'now_playing_movie_page.dart';
+import 'now_playing_movies_page.dart';
 
 class HomeMoviePage extends StatefulWidget {
   static const ROUTE_NAME = '/movies';
