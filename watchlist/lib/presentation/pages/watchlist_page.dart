@@ -3,7 +3,10 @@ import 'package:watchlist/presentation/pages/watchlist_movies_page.dart';
 import 'package:watchlist/presentation/pages/watchlist_tv_series_page.dart';
 
 class WatchlistPage extends StatelessWidget {
+  // ignore: constant_identifier_names
   static const ROUTE_NAME = '/watchlist';
+
+  const WatchlistPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class WatchlistPage extends StatelessWidget {
           ),
           title: const Text('Watchlist Ditonton'),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [WatchlistMoviesPage(), WatchlistTvSeriesPage()],
         ),
       ),

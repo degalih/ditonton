@@ -6,7 +6,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 import '../../../core/json_reader.dart';
 
-
 void main() {
   final tMovieModel = MovieModel(
     adult: false,

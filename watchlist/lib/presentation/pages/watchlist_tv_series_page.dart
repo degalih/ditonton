@@ -6,6 +6,8 @@ import 'package:tv_series/presentation/widgets/tv_series_card_list.dart';
 import '../bloc/tv_series/watchlist_tv_series_bloc.dart';
 
 class WatchlistTvSeriesPage extends StatefulWidget {
+  const WatchlistTvSeriesPage({Key? key}) : super(key: key);
+
   @override
   _WatchlistTvSeriesPageState createState() => _WatchlistTvSeriesPageState();
 }
@@ -25,6 +27,7 @@ class _WatchlistTvSeriesPageState extends State<WatchlistTvSeriesPage>
     routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
+  @override
   void didPopNext() {
     context.read<WatchlistTvSeriesBloc>().add(GetWatchlistTvSeriesEvent());
   }
@@ -37,7 +40,7 @@ class _WatchlistTvSeriesPageState extends State<WatchlistTvSeriesPage>
         child: BlocBuilder<WatchlistTvSeriesBloc, WatchlistTvSeriesState>(
           builder: (context, state) {
             if (state is WatchlistLoading) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             } else if (state is WatchlistHasData) {
@@ -51,7 +54,7 @@ class _WatchlistTvSeriesPageState extends State<WatchlistTvSeriesPage>
               );
             } else if (state is WatchlistError) {
               return Center(
-                key: Key('error_message'),
+                key: const Key('error_message'),
                 child: Text(state.message),
               );
             } else {

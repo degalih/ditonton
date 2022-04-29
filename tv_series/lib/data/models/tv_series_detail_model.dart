@@ -1,11 +1,9 @@
 import 'package:core/data/models/genre_model.dart';
 import 'package:equatable/equatable.dart';
-
-import '../../domain/entities/tv_series_detail.dart';
-
+import 'package:tv_series/tv_series.dart';
 
 class TvSeriesDetailResponse extends Equatable {
-  TvSeriesDetailResponse({
+  const TvSeriesDetailResponse({
     required this.adult,
     required this.backdropPath,
     required this.genres,
@@ -67,18 +65,18 @@ class TvSeriesDetailResponse extends Equatable {
 
   TvSeriesDetail toEntity() {
     return TvSeriesDetail(
-      adult: this.adult,
-      backdropPath: this.backdropPath,
-      genres: this.genres.map((genre) => genre.toEntity()).toList(),
-      id: this.id,
-      name: this.name,
-      numberOfEpisodes: this.numberOfEpisodes,
-      numberOfSeasons: this.numberOfSeasons,
-      overview: this.overview,
-      popularity: this.popularity,
-      posterPath: this.posterPath,
-      voteAverage: this.voteAverage,
-      voteCount: this.voteCount,
+      adult: adult,
+      backdropPath: backdropPath,
+      genres: genres.map((genre) => genre.toEntity()).toList(),
+      id: id,
+      name: name,
+      numberOfEpisodes: numberOfEpisodes,
+      numberOfSeasons: numberOfSeasons,
+      overview: overview,
+      popularity: popularity,
+      posterPath: posterPath,
+      voteAverage: voteAverage,
+      voteCount: voteCount,
     );
   }
 

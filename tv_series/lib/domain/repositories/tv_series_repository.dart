@@ -1,8 +1,6 @@
-import 'package:core/utils/failure.dart';
+import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
-
-import '../entities/tv.dart';
-import '../entities/tv_series_detail.dart';
+import 'package:tv_series/tv_series.dart';
 
 abstract class TvSeriesRepository {
   Future<Either<Failure, List<Tv>>> getOnTheAirTvSeries();

@@ -9,6 +9,7 @@ import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dar
 
 import '../../../core/dummy_data/dummy_objects.dart';
 import 'now_playing_movies_bloc_test.mocks.dart';
+
 @GenerateMocks([GetNowPlayingMovies])
 void main() {
   late NowPlayingMoviesBloc nowPlayingMoviesBloc;

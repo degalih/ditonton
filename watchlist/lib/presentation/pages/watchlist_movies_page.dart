@@ -5,6 +5,8 @@ import 'package:movies/presentation/widgets/movie_card_list.dart';
 import 'package:watchlist/presentation/bloc/movies/watchlist_movies_bloc.dart';
 
 class WatchlistMoviesPage extends StatefulWidget {
+  const WatchlistMoviesPage({Key? key}) : super(key: key);
+
   @override
   _WatchlistMoviesPageState createState() => _WatchlistMoviesPageState();
 }
@@ -24,6 +26,7 @@ class _WatchlistMoviesPageState extends State<WatchlistMoviesPage>
     routeObserver.subscribe(this, ModalRoute.of(context)!);
   }
 
+  @override
   void didPopNext() {
     context.read<WatchlistMoviesBloc>().add(GetWatchlistMoviesEvent());
   }
@@ -36,7 +39,7 @@ class _WatchlistMoviesPageState extends State<WatchlistMoviesPage>
         child: BlocBuilder<WatchlistMoviesBloc, WatchlistMoviesState>(
           builder: (context, state) {
             if (state is WatchlistLoading) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             } else if (state is WatchlistHasData) {
@@ -50,7 +53,7 @@ class _WatchlistMoviesPageState extends State<WatchlistMoviesPage>
               );
             } else if (state is WatchlistError) {
               return Center(
-                key: Key('error_message'),
+                key: const Key('error_message'),
                 child: Text(state.message),
               );
             } else {

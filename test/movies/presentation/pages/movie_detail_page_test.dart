@@ -134,24 +134,24 @@ void main() {
 
   testWidgets(
       'Watchlist button should display Snackbar when removed from watchlist',
-          (WidgetTester tester) async {
-        when(() => fakeMovieDetailBloc.state)
-            .thenReturn(MovieHasData(testMovieDetail));
-        when(() => fakeMovieRecommendationsBloc.state)
-            .thenReturn(MoviesHasData(<Movie>[]));
-        when(() => fakeWatchlistMoviesBloc.state)
-            .thenReturn(IsAddedToWatchListMovie(true, 'Removed from Watchlist'));
+      (WidgetTester tester) async {
+    when(() => fakeMovieDetailBloc.state)
+        .thenReturn(MovieHasData(testMovieDetail));
+    when(() => fakeMovieRecommendationsBloc.state)
+        .thenReturn(MoviesHasData(<Movie>[]));
+    when(() => fakeWatchlistMoviesBloc.state)
+        .thenReturn(IsAddedToWatchListMovie(true, 'Removed from Watchlist'));
 
-        final watchlistButton = find.byType(ElevatedButton);
+    final watchlistButton = find.byType(ElevatedButton);
 
-        await tester.pumpWidget(_makeTestableWidget(MovieDetailPage(id: 1)));
+    await tester.pumpWidget(_makeTestableWidget(MovieDetailPage(id: 1)));
 
-        expect(find.byIcon(Icons.check), findsOneWidget);
+    expect(find.byIcon(Icons.check), findsOneWidget);
 
-        await tester.tap(watchlistButton);
-        await tester.pump();
+    await tester.tap(watchlistButton);
+    await tester.pump();
 
-        expect(find.byType(SnackBar), findsOneWidget);
-        expect(find.text('Removed from Watchlist'), findsOneWidget);
-      });
+    expect(find.byType(SnackBar), findsOneWidget);
+    expect(find.text('Removed from Watchlist'), findsOneWidget);
+  });
 }

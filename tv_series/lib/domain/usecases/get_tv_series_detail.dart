@@ -1,8 +1,7 @@
 import 'package:dartz/dartz.dart';
 
 import 'package:core/utils/failure.dart';
-import '../entities/tv_series_detail.dart';
-import '../repositories/tv_series_repository.dart';
+import 'package:tv_series/tv_series.dart';
 
 class GetTvSeriesDetail {
   final TvSeriesRepository repository;

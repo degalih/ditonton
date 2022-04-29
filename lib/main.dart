@@ -1,23 +1,16 @@
 import 'package:about/about.dart';
-import 'package:core/styles/colors.dart';
-import 'package:core/styles/text_styles.dart';
-import 'package:core/utils/utils.dart';
+import 'package:core/core.dart';
 import 'package:ditonton/injection.dart' as di;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/movies.dart';
 import 'package:movies/presentation/bloc/detail/movie_detail_bloc.dart';
 import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dart';
 import 'package:movies/presentation/bloc/popular/popular_movies_bloc.dart';
 import 'package:movies/presentation/bloc/recommendations/movie_recommendations_bloc.dart';
 import 'package:movies/presentation/bloc/top_rated/top_rated_movies_bloc.dart';
-import 'package:movies/presentation/pages/home_movie_page.dart';
-import 'package:movies/presentation/pages/movie_detail_page.dart';
-import 'package:movies/presentation/pages/now_playing_movies_page.dart';
-import 'package:movies/presentation/pages/popular_movies_page.dart';
-import 'package:movies/presentation/pages/top_rated_movies_page.dart';
-import 'package:provider/provider.dart';
 import 'package:search/bloc/movies/search_bloc.dart';
 import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
 import 'package:search/search.dart';
@@ -26,14 +19,10 @@ import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc
 import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
 import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
 import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
-import 'package:tv_series/presentation/pages/home_tv_page.dart';
-import 'package:tv_series/presentation/pages/on_the_air_tv_series_page.dart';
-import 'package:tv_series/presentation/pages/popular_tv_series_page.dart';
-import 'package:tv_series/presentation/pages/top_rated_tv_series_page.dart';
-import 'package:tv_series/presentation/pages/tv_series_detail_page.dart';
+import 'package:tv_series/tv_series.dart';
 import 'package:watchlist/presentation/bloc/movies/watchlist_movies_bloc.dart';
 import 'package:watchlist/presentation/bloc/tv_series/watchlist_tv_series_bloc.dart';
-import 'package:watchlist/presentation/pages/watchlist_page.dart';
+import 'package:watchlist/watchlist.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,7 +34,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
         BlocProvider(
           create: (_) => di.locator<SearchBloc>(),

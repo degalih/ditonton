@@ -5,7 +5,6 @@ abstract class SearchTvSeriesEvent extends Equatable {
 
   @override
   List<Object> get props => [];
-
 }
 
 class OnQueryChanged extends SearchTvSeriesEvent {

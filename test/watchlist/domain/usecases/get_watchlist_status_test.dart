@@ -4,7 +4,6 @@ import 'package:watchlist/domain/usecases/movies/get_watchlist_status.dart';
 
 import '../../../core/helpers/test_helper.mocks.dart';
 
-
 void main() {
   late GetWatchListStatus usecase;
   late MockMovieRepository mockMovieRepository;

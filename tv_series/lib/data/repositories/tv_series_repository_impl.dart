@@ -2,14 +2,8 @@ import 'dart:io';
 
 import 'package:core/utils/exception.dart';
 import 'package:dartz/dartz.dart';
-
-import '../../domain/entities/tv.dart';
-import '../../domain/entities/tv_series_detail.dart';
-import '../../domain/repositories/tv_series_repository.dart';
 import 'package:core/utils/failure.dart';
-import '../datasources/tv_series_local_data_source.dart';
-import '../datasources/tv_series_remote_data_source.dart';
-import '../models/tv_series_table.dart';
+import 'package:tv_series/tv_series.dart';
 
 class TvSeriesRepositoryImpl implements TvSeriesRepository {
   final TvSeriesRemoteDataSource remoteDataSource;
@@ -90,7 +84,7 @@ class TvSeriesRepositoryImpl implements TvSeriesRepository {
     } on DatabaseException catch (e) {
       return Left(DatabaseFailure(e.message));
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 

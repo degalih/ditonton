@@ -1,18 +1,21 @@
 import 'package:core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies/presentation/widgets/movie_card_list.dart';
-import 'package:provider/provider.dart';
+import 'package:movies/movies.dart';
+
 import '../../bloc/movies/search_bloc.dart';
 
 class SearchPage extends StatelessWidget {
+  // ignore: constant_identifier_names
   static const ROUTE_NAME = '/movies/search';
+
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Movies'),
+        title: const Text('Search Movies'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -23,14 +26,14 @@ class SearchPage extends StatelessWidget {
               onChanged: (query) {
                 context.read<SearchBloc>().add(OnQueryChanged(query));
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Search title',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
               ),
               textInputAction: TextInputAction.search,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               'Search Result',
               style: kHeading6,
@@ -38,7 +41,7 @@ class SearchPage extends StatelessWidget {
             BlocBuilder<SearchBloc, SearchState>(
               builder: (context, state) {
                 if (state is SearchLoading) {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 } else if (state is SearchHasData) {

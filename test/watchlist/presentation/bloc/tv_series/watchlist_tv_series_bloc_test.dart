@@ -95,7 +95,8 @@ void main() {
       return watchlistTvSeriesBloc;
     },
     act: (bloc) => bloc.add(RemoveWatchlistEvent(testTvSeriesDetail)),
-    expect: () => [IsAddedToWatchListTvSeries(false, 'Removed to Watchlist TV Series')],
+    expect: () =>
+        [IsAddedToWatchListTvSeries(false, 'Removed to Watchlist TV Series')],
     verify: (bloc) =>
         verify(mockRemoveWatchlistTvSeries.execute(testTvSeriesDetail)),
   );

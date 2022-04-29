@@ -6,7 +6,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 import '../../../core/json_reader.dart';
 
-
 void main() {
   final tTvSeriesModel = TvSeriesModel(
       posterPath: '/nJUHX3XL1jMkk8honUZnUmudFb9.jpg',

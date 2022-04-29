@@ -7,23 +7,23 @@ abstract class WatchlistTvSeriesState extends Equatable {
   List<Object> get props => [];
 }
 
-class WatchlistEmpty extends WatchlistTvSeriesState{}
+class WatchlistEmpty extends WatchlistTvSeriesState {}
 
-class WatchlistLoading extends WatchlistTvSeriesState{}
+class WatchlistLoading extends WatchlistTvSeriesState {}
 
-class WatchlistError extends WatchlistTvSeriesState{
+class WatchlistError extends WatchlistTvSeriesState {
   final String message;
 
-  WatchlistError(this.message);
+  const WatchlistError(this.message);
 
   @override
   List<Object> get props => [message];
 }
 
-class WatchlistHasData extends WatchlistTvSeriesState{
+class WatchlistHasData extends WatchlistTvSeriesState {
   final List<Tv> result;
 
-  WatchlistHasData(this.result);
+  const WatchlistHasData(this.result);
 
   @override
   List<Object> get props => [result];
@@ -33,7 +33,7 @@ class IsAddedToWatchListTvSeries extends WatchlistTvSeriesState {
   final bool isAdded;
   final String message;
 
-  IsAddedToWatchListTvSeries(this.isAdded, this.message);
+  const IsAddedToWatchListTvSeries(this.isAdded, this.message);
 
   @override
   List<Object> get props => [isAdded, message];

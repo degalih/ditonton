@@ -12,13 +12,13 @@ class GetWatchlistMoviesEvent extends WatchlistMoviesEvent {}
 class GetWatchlistStatusEvent extends WatchlistMoviesEvent {
   final int id;
 
-  GetWatchlistStatusEvent(this.id);
+  const GetWatchlistStatusEvent(this.id);
 }
 
 class SaveWatchlistEvent extends WatchlistMoviesEvent {
   final MovieDetail movie;
 
-  SaveWatchlistEvent(this.movie);
+  const SaveWatchlistEvent(this.movie);
 
   @override
   List<Object> get props => [movie];
@@ -27,7 +27,7 @@ class SaveWatchlistEvent extends WatchlistMoviesEvent {
 class RemoveWatchlistEvent extends WatchlistMoviesEvent {
   final MovieDetail movie;
 
-  RemoveWatchlistEvent(this.movie);
+  const RemoveWatchlistEvent(this.movie);
 
   @override
   List<Object> get props => [movie];

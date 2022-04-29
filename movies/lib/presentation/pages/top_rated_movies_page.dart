@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
+import 'package:movies/movies.dart';
 
 import '../bloc/top_rated/top_rated_movies_bloc.dart';
-import '../widgets/movie_card_list.dart';
 
 class TopRatedMoviesPage extends StatefulWidget {
+  // ignore: constant_identifier_names
   static const ROUTE_NAME = '/movies/top-rated';
+
+  const TopRatedMoviesPage({Key? key}) : super(key: key);
 
   @override
   _TopRatedMoviesPageState createState() => _TopRatedMoviesPageState();
@@ -24,14 +26,14 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top Rated Movies'),
+        title: const Text('Top Rated Movies'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: BlocBuilder<TopRatedMoviesBloc, TopRatedMoviesState>(
           builder: (context, state) {
             if (state is MoviesLoading) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             } else if (state is MoviesHasData) {
@@ -44,7 +46,7 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
               );
             } else if (state is MoviesError) {
               return Center(
-                key: Key('error_message'),
+                key: const Key('error_message'),
                 child: Text(state.message),
               );
             } else {

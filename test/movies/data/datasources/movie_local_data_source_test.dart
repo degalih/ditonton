@@ -6,7 +6,6 @@ import 'package:mockito/mockito.dart';
 import '../../../core/dummy_data/dummy_objects.dart';
 import '../../../core/helpers/test_helper.mocks.dart';
 
-
 void main() {
   late MovieLocalDataSourceImpl dataSource;
   late MockDatabaseHelper mockDatabaseHelper;

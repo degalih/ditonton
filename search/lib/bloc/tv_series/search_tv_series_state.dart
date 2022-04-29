@@ -7,11 +7,11 @@ abstract class SearchTvSeriesState extends Equatable {
   List<Object> get props => [];
 }
 
-class SearchTvSeriesEmpty extends SearchTvSeriesState{}
+class SearchTvSeriesEmpty extends SearchTvSeriesState {}
 
-class SearchTvSeriesLoading extends SearchTvSeriesState{}
+class SearchTvSeriesLoading extends SearchTvSeriesState {}
 
-class SearchTvSeriesError extends SearchTvSeriesState{
+class SearchTvSeriesError extends SearchTvSeriesState {
   final String message;
 
   const SearchTvSeriesError(this.message);
@@ -20,7 +20,7 @@ class SearchTvSeriesError extends SearchTvSeriesState{
   List<Object> get props => [message];
 }
 
-class SearchTvSeriesHasData extends SearchTvSeriesState{
+class SearchTvSeriesHasData extends SearchTvSeriesState {
   final List<Tv> result;
 
   const SearchTvSeriesHasData(this.result);

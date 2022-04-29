@@ -1,12 +1,10 @@
 import 'dart:convert';
 
+import 'package:core/core.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:core/utils/exception.dart';
 import 'package:http/io_client.dart';
-import '../models/tv_series_detail_model.dart';
-import '../models/tv_series_model.dart';
-import '../models/tv_series_response.dart';
+import 'package:tv_series/tv_series.dart';
 
 abstract class TvSeriesRemoteDataSource {
   Future<List<TvSeriesModel>> getOnTheAirTvSeries();
@@ -23,7 +21,9 @@ abstract class TvSeriesRemoteDataSource {
 }
 
 class TvSeriesRemoteDataSourceImpl implements TvSeriesRemoteDataSource {
+  // ignore: constant_identifier_names
   static const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';
+  // ignore: constant_identifier_names
   static const BASE_URL = 'https://api.themoviedb.org/3';
 
   final http.Client httpClient;
