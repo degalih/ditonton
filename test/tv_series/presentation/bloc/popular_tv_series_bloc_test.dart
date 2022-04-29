@@ -8,7 +8,7 @@ import 'package:tv_series/domain/usecases/get_popular_tv_series.dart';
 import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
 
 import '../../../core/dummy_data/dummy_objects.dart';
-import '../provider/popular_tv_series_notifier_test.mocks.dart';
+import 'popular_tv_series_bloc_test.mocks.dart';
 
 @GenerateMocks([GetPopularTvSeries])
 void main() {

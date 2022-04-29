@@ -8,7 +8,7 @@ import 'package:movies/domain/usecases/get_top_rated_movies.dart';
 import 'package:movies/presentation/bloc/top_rated/top_rated_movies_bloc.dart';
 
 import '../../../core/dummy_data/dummy_objects.dart';
-import '../provider/movie_list_notifier_test.mocks.dart';
+import 'top_rated_movies_bloc_test.mocks.dart';
 
 @GenerateMocks([GetTopRatedMovies])
 void main() {

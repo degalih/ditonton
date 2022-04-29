@@ -8,7 +8,7 @@ import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
 import 'package:search/domain/usecases/search_tv_series.dart';
 import 'package:tv_series/domain/entities/tv.dart';
 
-import '../provider/tv_series_search_notifier_test.mocks.dart';
+import 'search_tv_series_bloc_test.mocks.dart';
 
 @GenerateMocks([SearchTvSeries])
 void main() {

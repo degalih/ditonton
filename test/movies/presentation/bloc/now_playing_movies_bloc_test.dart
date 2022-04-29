@@ -8,8 +8,7 @@ import 'package:movies/domain/usecases/get_now_playing_movies.dart';
 import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dart';
 
 import '../../../core/dummy_data/dummy_objects.dart';
-import '../provider/movie_list_notifier_test.mocks.dart';
-
+import 'now_playing_movies_bloc_test.mocks.dart';
 @GenerateMocks([GetNowPlayingMovies])
 void main() {
   late NowPlayingMoviesBloc nowPlayingMoviesBloc;

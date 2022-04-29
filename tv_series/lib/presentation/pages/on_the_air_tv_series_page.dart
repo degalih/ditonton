@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';
 
 import '../widgets/tv_series_card_list.dart';

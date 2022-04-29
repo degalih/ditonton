@@ -8,7 +8,7 @@ import 'package:tv_series/domain/usecases/get_top_rated_tv_series.dart';
 import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
 
 import '../../../core/dummy_data/dummy_objects.dart';
-import '../provider/top_rated_tv_series_notifier_test.mocks.dart';
+import 'top_rated_tv_series_bloc_test.mocks.dart';
 
 @GenerateMocks([GetTopRatedTvSeries])
 void main() {
