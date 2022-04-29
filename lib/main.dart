@@ -26,6 +26,11 @@ import 'package:provider/provider.dart';
 import 'package:search/bloc/movies/search_bloc.dart';
 import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
 import 'package:search/search.dart';
+import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
+import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';
+import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
+import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
+import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
 import 'package:tv_series/presentation/pages/home_tv_page.dart';
 import 'package:tv_series/presentation/pages/on_the_air_tv_series_page.dart';
 import 'package:tv_series/presentation/pages/popular_tv_series_page.dart';
@@ -118,6 +123,21 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (_) => di.locator<MovieRecommendationsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<OnTheAirTvSeriesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<PopularTvSeriesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TopRatedTvSeriesBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TvSeriesDetailBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TvSeriesRecommendationsBloc>(),
         ),
       ],
       child: MaterialApp(

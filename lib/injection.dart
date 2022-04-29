@@ -33,6 +33,11 @@ import 'package:tv_series/domain/usecases/get_popular_tv_series.dart';
 import 'package:tv_series/domain/usecases/get_top_rated_tv_series.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_detail.dart';
 import 'package:tv_series/domain/usecases/get_tv_series_recommendations.dart';
+import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
+import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';
+import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
+import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
+import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
 import 'package:tv_series/presentation/provider/on_the_air_tv_series_notifier.dart';
 import 'package:tv_series/presentation/provider/popular_tv_series_notifier.dart';
 import 'package:tv_series/presentation/provider/top_rated_tv_series_notifier.dart';
@@ -102,6 +107,32 @@ void init() {
   );
   locator.registerFactory(
     () => MovieRecommendationsBloc(
+      locator(),
+    ),
+  );
+  //Tv Series Bloc
+  locator.registerFactory(
+    () => OnTheAirTvSeriesBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => PopularTvSeriesBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => TopRatedTvSeriesBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => TvSeriesDetailBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => TvSeriesRecommendationsBloc(
       locator(),
     ),
   );
