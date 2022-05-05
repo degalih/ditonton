@@ -1,3 +1,4 @@
+import 'package:core/core.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:movies/movies.dart';
@@ -76,7 +77,7 @@ void init() {
     ),
   );
   locator.registerFactory(
-        () => TvSeriesSeasonsBloc(
+    () => TvSeriesSeasonsBloc(
       locator(),
     ),
   );
@@ -171,4 +172,5 @@ void init() {
 
   // external
   locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => SSLPinning.ioClient);
 }

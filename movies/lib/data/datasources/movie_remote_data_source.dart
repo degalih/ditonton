@@ -22,6 +22,7 @@ abstract class MovieRemoteDataSource {
 class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   // ignore: constant_identifier_names
   static const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';
+
   // ignore: constant_identifier_names
   static const BASE_URL = 'https://api.themoviedb.org/3';
 
@@ -37,7 +38,7 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
     final response =
-        await client.get(Uri.parse('$BASE_URL/movie/now_playing?$API_KEY'));
+    await client.get(Uri.parse('$BASE_URL/movie/now_playing?$API_KEY'));
 
     if (response.statusCode == 200) {
       return MovieResponse.fromJson(json.decode(response.body)).movieList;
