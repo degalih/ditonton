@@ -13,6 +13,7 @@ import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
 import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';
 import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
 import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
+import 'package:tv_series/presentation/bloc/seasons/tv_series_seasons_bloc.dart';
 import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
 import 'package:tv_series/tv_series.dart';
 import 'package:watchlist/presentation/bloc/movies/watchlist_movies_bloc.dart';
@@ -74,6 +75,11 @@ void init() {
       locator(),
     ),
   );
+  locator.registerFactory(
+        () => TvSeriesSeasonsBloc(
+      locator(),
+    ),
+  );
 
   //search bloc
   locator.registerFactory(
@@ -116,6 +122,7 @@ void init() {
   locator.registerLazySingleton(() => RemoveWatchlistTvSeries(locator()));
   locator.registerLazySingleton(() => GetWatchlistTvSeries(locator()));
   locator.registerLazySingleton(() => SearchTvSeries(locator()));
+  locator.registerLazySingleton(() => GetTvSeriesSeasons(locator()));
 
   // use case | Movie
   locator.registerLazySingleton(() => GetNowPlayingMovies(locator()));

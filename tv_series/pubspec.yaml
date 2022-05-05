@@ -24,6 +24,7 @@ dependencies:
   encrypt: ^5.0.1
   firebase_crashlytics: ^2.6.2
   flutter_bloc: ^8.0.0
+  expandable: ^5.0.1
   core:
     path: ../core
   watchlist:

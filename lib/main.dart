@@ -18,6 +18,7 @@ import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
 import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';
 import 'package:tv_series/presentation/bloc/popular/popular_tv_series_bloc.dart';
 import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
+import 'package:tv_series/presentation/bloc/seasons/tv_series_seasons_bloc.dart';
 import 'package:tv_series/presentation/bloc/top_rated/top_rated_tv_series_bloc.dart';
 import 'package:tv_series/tv_series.dart';
 import 'package:watchlist/presentation/bloc/movies/watchlist_movies_bloc.dart';
@@ -77,6 +78,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (_) => di.locator<TvSeriesRecommendationsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TvSeriesSeasonsBloc>(),
         ),
       ],
       child: MaterialApp(

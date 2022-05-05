@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
 import 'package:tv_series/presentation/bloc/recommendations/tv_series_recommendations_bloc.dart';
+import 'package:tv_series/presentation/widgets/tv_series_season_expandable%20list.dart';
 import 'package:watchlist/presentation/bloc/tv_series/watchlist_tv_series_bloc.dart';
 
 import '../../domain/entities/tv_series_detail.dart';
@@ -199,6 +200,7 @@ class DetailContent extends StatelessWidget {
                               tvSeriesDetail.overview,
                             ),
                             const SizedBox(height: 16),
+                            TvSeriesSeasonExpandableList(tvId: tvSeriesDetail.id, seasonId: tvSeriesDetail.numberOfSeasons),
                             Text(
                               'Recommendations',
                               style: kHeading6,

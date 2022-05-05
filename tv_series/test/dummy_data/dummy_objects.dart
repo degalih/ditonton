@@ -1,7 +1,6 @@
-
-
 import 'package:core/core.dart';
 import 'package:movies/movies.dart';
+import 'package:tv_series/data/models/tv_series_seasons_model.dart';
 import 'package:tv_series/tv_series.dart';
 
 final testMovie = Movie(
@@ -45,7 +44,7 @@ final testWatchlistMovie = Movie.watchlist(
   overview: 'overview',
 );
 
-const testMovieTable =  MovieTable(
+const testMovieTable = MovieTable(
   id: 1,
   title: 'title',
   posterPath: 'posterPath',
@@ -60,7 +59,7 @@ final testMovieMap = {
 };
 
 // TV Series
-const testTvSeriesTable =  TvSeriesTable(
+const testTvSeriesTable = TvSeriesTable(
   id: 1402,
   name: 'The Walking Dead',
   posterPath: '/xf9wuDcqlUPWABZNeDKPbZUjWx0.jpg',
@@ -118,5 +117,26 @@ final testTvSeries = Tv(
     posterPath: '/nJUHX3XL1jMkk8honUZnUmudFb9.jpg',
     voteAverage: 8.9,
     voteCount: 300);
+
+final testTvSeriesSeasons = TvSeriesSeasons(
+  id: 1,
+  episodes: [
+    Episode(
+        episodeNumber: 1,
+        id: 1,
+        name: 'name',
+        overview: 'overview',
+        seasonNumber: 1),
+    Episode(
+        episodeNumber: 2,
+        id: 2,
+        name: 'name 2',
+        overview: 'overview ',
+        seasonNumber: 2),
+  ],
+  name: 'name',
+  overview: 'overview',
+  seasonNumber: 1,
+);
 
 final testTvSeriesList = [testTvSeries];

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:core/utils/exception.dart';
-import 'package:dartz/dartz.dart';
 import 'package:core/utils/failure.dart';
+import 'package:dartz/dartz.dart';
 import 'package:tv_series/tv_series.dart';
 
 class TvSeriesRepositoryImpl implements TvSeriesRepository {
@@ -117,6 +117,19 @@ class TvSeriesRepositoryImpl implements TvSeriesRepository {
     try {
       final result = await remoteDataSource.searchTvSeries(query);
       return Right(result.map((model) => model.toEntity()).toList());
+    } on ServerException {
+      return Left(ServerFailure(''));
+    } on SocketException {
+      return Left(ConnectionFailure('Failed to connect to the network'));
+    }
+  }
+
+  @override
+  Future<Either<Failure, TvSeriesSeasons>> getTvSeriesSeasons(
+      int id, int season) async {
+    try {
+      final result = await remoteDataSource.getTvSeriesSeasons(id, season);
+      return Right(result.toEntity());
     } on ServerException {
       return Left(ServerFailure(''));
     } on SocketException {
