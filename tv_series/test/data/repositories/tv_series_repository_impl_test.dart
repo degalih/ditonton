@@ -14,7 +14,6 @@ import 'package:mockito/mockito.dart';
 import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
-
 void main() {
   late TvSeriesRepositoryImpl repository;
   late MockTvSeriesRemoteDataSource mockRemoteDataSource;

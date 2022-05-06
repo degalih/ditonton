@@ -110,8 +110,7 @@ class TvSeriesRemoteDataSourceImpl implements TvSeriesRemoteDataSource {
   }
 
   @override
-  Future<TvSeriesSeasonsModel> getTvSeriesSeasons(
-      int id, int season) async {
+  Future<TvSeriesSeasonsModel> getTvSeriesSeasons(int id, int season) async {
     final response =
         await client.get(Uri.parse('$BASE_URL/tv/$id/season/$season?$API_KEY'));
 

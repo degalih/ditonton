@@ -2,8 +2,7 @@ import 'package:core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/movies.dart';
-
-import '../../bloc/movies/search_bloc.dart';
+import 'package:search/presentation/bloc/movies/search_bloc.dart';
 
 class SearchPage extends StatelessWidget {
   // ignore: constant_identifier_names

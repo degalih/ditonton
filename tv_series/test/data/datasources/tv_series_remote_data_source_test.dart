@@ -11,7 +11,6 @@ import 'package:mockito/mockito.dart';
 import '../../helpers/test_helper.mocks.dart';
 import '../../json_reader.dart';
 
-
 void main() {
   // ignore: constant_identifier_names
   const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';
@@ -117,16 +116,15 @@ void main() {
 
   group('get TV Series detail', () {
     const tId = 1;
-    final tTvSeriesDetail = TvSeriesDetailResponse.fromJson(json
-        .decode(readJson('dummy_data/tv_series/tv_series_detail.json')));
+    final tTvSeriesDetail = TvSeriesDetailResponse.fromJson(
+        json.decode(readJson('dummy_data/tv_series/tv_series_detail.json')));
 
     test('should return TV Series detail when the response code is 200',
         () async {
       // arrange
       when(mockHttpClient.get(Uri.parse('$BASE_URL/tv/$tId?$API_KEY')))
           .thenAnswer((_) async => http.Response(
-              readJson('dummy_data/tv_series/tv_series_detail.json'),
-              200));
+              readJson('dummy_data/tv_series/tv_series_detail.json'), 200));
       // act
       final result = await dataSource.getTvSeriesDetail(tId);
       // assert
@@ -146,8 +144,8 @@ void main() {
   });
 
   group('get TV Series recommendations', () {
-    final tTvSeriesList = TvSeriesResponse.fromJson(json.decode(readJson(
-            'dummy_data/tv_series/tv_series_recommendations.json')))
+    final tTvSeriesList = TvSeriesResponse.fromJson(json.decode(
+            readJson('dummy_data/tv_series/tv_series_recommendations.json')))
         .tvList;
     const tId = 1;
 
@@ -157,8 +155,7 @@ void main() {
       when(mockHttpClient
               .get(Uri.parse('$BASE_URL/tv/$tId/recommendations?$API_KEY')))
           .thenAnswer((_) async => http.Response(
-              readJson(
-                  'dummy_data/tv_series/tv_series_recommendations.json'),
+              readJson('dummy_data/tv_series/tv_series_recommendations.json'),
               200));
       // act
       final result = await dataSource.getTvSeriesRecommendations(tId);

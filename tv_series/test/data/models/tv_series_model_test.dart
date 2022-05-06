@@ -24,7 +24,11 @@ void main() {
       genreIds: const [1, 2, 3],
       id: 1,
       name: 'name',
-      originCountry: const ['originCountry', 'originCountry2', 'originCountry3'],
+      originCountry: const [
+        'originCountry',
+        'originCountry2',
+        'originCountry3'
+      ],
       originalLanguage: 'originalLanguage',
       originalName: 'originalName',
       overview: 'overview',

@@ -4,7 +4,6 @@ import 'package:watchlist/domain/usecases/tv_series/get_watchlist_status_tv_seri
 
 import '../../helpers/test_helper.mocks.dart';
 
-
 void main() {
   late GetWatchListStatusTvSeries usecase;
   late MockTvSeriesRepository mockTvSeriesRepository;

@@ -6,7 +6,6 @@ import 'package:mockito/mockito.dart';
 
 import '../../helpers/test_helper.mocks.dart';
 
-
 void main() {
   late GetOnTheAirTvSeries usecase;
   late MockTvSeriesRepository mockMovieRepository;

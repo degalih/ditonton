@@ -7,7 +7,6 @@ import 'package:watchlist/domain/usecases/tv_series/remove_watchlist_tv_series.d
 import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
-
 void main() {
   late RemoveWatchlistTvSeries usecase;
   late MockTvSeriesRepository mockTvSeriesRepository;

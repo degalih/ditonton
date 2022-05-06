@@ -1,5 +1,3 @@
-
-
 import 'package:core/core.dart';
 import 'package:movies/movies.dart';
 import 'package:tv_series/tv_series.dart';
@@ -60,7 +58,7 @@ final testMovieMap = {
 };
 
 // TV Series
-const testTvSeriesTable =  TvSeriesTable(
+const testTvSeriesTable = TvSeriesTable(
   id: 1402,
   name: 'The Walking Dead',
   posterPath: '/xf9wuDcqlUPWABZNeDKPbZUjWx0.jpg',

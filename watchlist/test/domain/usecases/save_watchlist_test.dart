@@ -6,7 +6,6 @@ import 'package:watchlist/domain/usecases/movies/save_watchlist.dart';
 import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
-
 void main() {
   late SaveWatchlist usecase;
   late MockMovieRepository mockMovieRepository;

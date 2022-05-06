@@ -12,7 +12,6 @@ import 'package:watchlist/presentation/bloc/movies/watchlist_movies_bloc.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 
-
 class FakeMovieDetailEvent extends Fake implements MovieDetailEvent {}
 
 class FakeMovieDetailState extends Fake implements MovieDetailState {}

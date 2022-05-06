@@ -7,8 +7,8 @@ import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dar
 import 'package:movies/presentation/bloc/popular/popular_movies_bloc.dart';
 import 'package:movies/presentation/bloc/recommendations/movie_recommendations_bloc.dart';
 import 'package:movies/presentation/bloc/top_rated/top_rated_movies_bloc.dart';
-import 'package:search/bloc/movies/search_bloc.dart';
-import 'package:search/bloc/tv_series/search_tv_series_bloc.dart';
+import 'package:search/presentation/bloc/movies/search_bloc.dart';
+import 'package:search/presentation/bloc/tv_series/search_tv_series_bloc.dart';
 import 'package:search/search.dart';
 import 'package:tv_series/presentation/bloc/detail/tv_series_detail_bloc.dart';
 import 'package:tv_series/presentation/bloc/on_the_air/on_the_air_tv_series_bloc.dart';

@@ -200,7 +200,9 @@ class DetailContent extends StatelessWidget {
                               tvSeriesDetail.overview,
                             ),
                             const SizedBox(height: 16),
-                            TvSeriesSeasonExpandableList(tvId: tvSeriesDetail.id, seasonId: tvSeriesDetail.numberOfSeasons),
+                            TvSeriesSeasonExpandableList(
+                                tvId: tvSeriesDetail.id,
+                                seasonId: tvSeriesDetail.numberOfSeasons),
                             Text(
                               'Recommendations',
                               style: kHeading6,

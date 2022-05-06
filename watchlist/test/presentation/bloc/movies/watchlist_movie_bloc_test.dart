@@ -94,7 +94,8 @@ void main() {
       return watchlistMoviesBloc;
     },
     act: (bloc) => bloc.add(RemoveWatchlistEvent(testMovieDetail)),
-    expect: () => [const IsAddedToWatchListMovie(false, 'Removed to Watchlist')],
+    expect: () =>
+        [const IsAddedToWatchListMovie(false, 'Removed to Watchlist')],
     verify: (bloc) => verify(mockRemoveWatchlist.execute(testMovieDetail)),
   );
 
