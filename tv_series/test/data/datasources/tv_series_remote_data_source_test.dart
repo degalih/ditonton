@@ -23,7 +23,7 @@ void main() {
 
   setUp(() {
     mockHttpClient = MockHttpClient();
-    dataSource = TvSeriesRemoteDataSourceImpl(httpClient: mockHttpClient);
+    dataSource = TvSeriesRemoteDataSourceImpl(client: mockHttpClient);
   });
 
   group('get On The Air TV Series', () {

@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:tv_series/tv_series.dart';
+
 // TV Series
 const testTvSeriesTable = TvSeriesTable(
   id: 1402,

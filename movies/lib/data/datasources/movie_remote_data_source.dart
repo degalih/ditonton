@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:core/utils/exception.dart';
-import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 import 'package:movies/movies.dart';
 
@@ -26,14 +25,9 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   // ignore: constant_identifier_names
   static const BASE_URL = 'https://api.themoviedb.org/3';
 
-  final http.Client httpClient;
-  final IOClient? ioClient;
-  late final http.Client client;
+  final IOClient client;
 
-  MovieRemoteDataSourceImpl({
-    required this.httpClient,
-    this.ioClient,
-  }) : client = ioClient ?? httpClient;
+  MovieRemoteDataSourceImpl({required this.client});
 
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {

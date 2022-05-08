@@ -1,6 +1,6 @@
-import 'package:core/core.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
+import 'package:http/io_client.dart';
 import 'package:movies/movies.dart';
 import 'package:movies/presentation/bloc/detail/movie_detail_bloc.dart';
 import 'package:movies/presentation/bloc/now_playing/now_playing_movies_bloc.dart';
@@ -23,7 +23,7 @@ import 'package:watchlist/watchlist.dart';
 
 final locator = GetIt.instance;
 
-void init() {
+void init(IOClient ioClient) {
   //movies bloc
   locator.registerFactory(
     () => NowPlayingMoviesBloc(
@@ -155,13 +155,13 @@ void init() {
 
   // data sources | Tv Series
   locator.registerLazySingleton<TvSeriesRemoteDataSource>(
-      () => TvSeriesRemoteDataSourceImpl(httpClient: locator()));
+      () => TvSeriesRemoteDataSourceImpl(client: locator()));
   locator.registerLazySingleton<TvSeriesLocalDataSource>(
       () => TvSeriesLocalDataSourceImpl(databaseHelper: locator()));
 
   // data sources | Movie
   locator.registerLazySingleton<MovieRemoteDataSource>(
-      () => MovieRemoteDataSourceImpl(httpClient: locator()));
+      () => MovieRemoteDataSourceImpl(client: locator()));
   locator.registerLazySingleton<MovieLocalDataSource>(
       () => MovieLocalDataSourceImpl(databaseHelper: locator()));
 
@@ -172,5 +172,5 @@ void init() {
 
   // external
   locator.registerLazySingleton(() => http.Client());
-  locator.registerLazySingleton(() => SSLPinning.ioClient);
+  locator.registerLazySingleton(() => ioClient);
 }

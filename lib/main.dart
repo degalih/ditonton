@@ -28,7 +28,8 @@ import 'package:watchlist/watchlist.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  di.init();
+  final ioClient = await SSLPinning.ioClient;
+  di.init(ioClient);
   runApp(MyApp());
 }
 

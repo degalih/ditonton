@@ -36,37 +36,37 @@ void main() {
   }
 
   testWidgets('Page should display progress bar when loading',
-          (WidgetTester tester) async {
-        when(() => fakeWatchlistMoviesBloc.state).thenReturn(WatchlistLoading());
+      (WidgetTester tester) async {
+    when(() => fakeWatchlistMoviesBloc.state).thenReturn(WatchlistLoading());
 
-        final progressFinder = find.byType(CircularProgressIndicator);
+    final progressFinder = find.byType(CircularProgressIndicator);
 
-        await tester.pumpWidget(_makeTestableWidget(const WatchlistMoviesPage()));
+    await tester.pumpWidget(_makeTestableWidget(const WatchlistMoviesPage()));
 
-        expect(progressFinder, findsWidgets);
-      });
+    expect(progressFinder, findsWidgets);
+  });
 
   testWidgets('Page should display when data is loaded',
-          (WidgetTester tester) async {
-        when(() => fakeWatchlistMoviesBloc.state)
-            .thenReturn(const WatchlistHasData(<Movie>[]));
+      (WidgetTester tester) async {
+    when(() => fakeWatchlistMoviesBloc.state)
+        .thenReturn(const WatchlistHasData(<Movie>[]));
 
-        final listViewFinder = find.byType(ListView);
+    final listViewFinder = find.byType(ListView);
 
-        await tester.pumpWidget(_makeTestableWidget(const WatchlistPage()));
+    await tester.pumpWidget(_makeTestableWidget(const WatchlistPage()));
 
-        expect(listViewFinder, findsWidgets);
-      });
+    expect(listViewFinder, findsWidgets);
+  });
 
   testWidgets('Page should display text with message when Error',
-          (WidgetTester tester) async {
-        when(() => fakeWatchlistMoviesBloc.state)
-            .thenReturn(const WatchlistError('Failed'));
+      (WidgetTester tester) async {
+    when(() => fakeWatchlistMoviesBloc.state)
+        .thenReturn(const WatchlistError('Failed'));
 
-        final textFinder = find.byWidgetPredicate((widget) => true);
+    final textFinder = find.byWidgetPredicate((widget) => true);
 
-        await tester.pumpWidget(_makeTestableWidget(const WatchlistPage()));
+    await tester.pumpWidget(_makeTestableWidget(const WatchlistPage()));
 
-        expect(textFinder, findsWidgets);
-      });
+    expect(textFinder, findsWidgets);
+  });
 }

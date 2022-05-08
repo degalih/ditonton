@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:core/core.dart';
-import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 import 'package:tv_series/tv_series.dart';
 
@@ -28,14 +27,9 @@ class TvSeriesRemoteDataSourceImpl implements TvSeriesRemoteDataSource {
   // ignore: constant_identifier_names
   static const BASE_URL = 'https://api.themoviedb.org/3';
 
-  final http.Client httpClient;
-  final IOClient? ioClient;
-  late final http.Client client;
+  final IOClient client;
 
-  TvSeriesRemoteDataSourceImpl({
-    required this.httpClient,
-    this.ioClient,
-  }) : client = ioClient ?? httpClient;
+  TvSeriesRemoteDataSourceImpl({required this.client});
 
   @override
   Future<List<TvSeriesModel>> getOnTheAirTvSeries() async {

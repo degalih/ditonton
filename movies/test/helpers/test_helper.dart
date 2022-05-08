@@ -1,5 +1,5 @@
+import 'package:http/io_client.dart';
 import 'package:mockito/annotations.dart';
-import 'package:http/http.dart' as http;
 import 'package:movies/movies.dart';
 
 @GenerateMocks([
@@ -8,6 +8,6 @@ import 'package:movies/movies.dart';
   MovieLocalDataSource,
   DatabaseHelper,
 ], customMocks: [
-  MockSpec<http.Client>(as: #MockHttpClient)
+  MockSpec<IOClient>(as: #MockHttpClient)
 ])
 void main() {}
