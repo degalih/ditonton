@@ -7,6 +7,7 @@ export 'data/models/tv_series_detail_model.dart';
 export 'data/models/tv_series_model.dart';
 export 'data/models/tv_series_response.dart';
 export 'data/models/tv_series_table.dart';
+export 'data/models/tv_series_seasons_model.dart';
 export 'data/repositories/tv_series_repository_impl.dart';
 export 'domain/entities/tv.dart';
 export 'domain/entities/tv_series_detail.dart';

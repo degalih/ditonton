@@ -1,12 +1,13 @@
 import 'dart:convert';
 
 import 'package:core/utils/exception.dart';
-import 'package:tv_series/data/datasources/tv_series_remote_data_source.dart';
-import 'package:tv_series/data/models/tv_series_detail_model.dart';
-import 'package:tv_series/data/models/tv_series_response.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
+import 'package:tv_series/data/datasources/tv_series_remote_data_source.dart';
+import 'package:tv_series/data/models/tv_series_detail_model.dart';
+import 'package:tv_series/data/models/tv_series_response.dart';
+import 'package:tv_series/data/models/tv_series_seasons_model.dart';
 
 import '../../helpers/test_helper.mocks.dart';
 import '../../json_reader.dart';
@@ -203,6 +204,38 @@ void main() {
           .thenAnswer((_) async => http.Response('Not Found', 404));
       // act
       final call = dataSource.searchTvSeries(tQuery);
+      // assert
+      expect(() => call, throwsA(isA<ServerException>()));
+    });
+  });
+
+  group('get TV Series season', () {
+    const tId = 1;
+    const tSeasonId = 1;
+    final tTvSeriesSeason = TvSeriesSeasonsModel.fromJson(
+        json.decode(readJson('dummy_data/tv_series/tv_series_season.json')));
+
+    test('should return TV Series season when the response code is 200',
+        () async {
+      // arrange
+      when(mockHttpClient
+              .get(Uri.parse('$BASE_URL/tv/$tId/season/$tSeasonId?$API_KEY')))
+          .thenAnswer((_) async => http.Response(
+              readJson('dummy_data/tv_series/tv_series_season.json'), 200));
+      // act
+      final result = await dataSource.getTvSeriesSeasons(tId, tSeasonId);
+      // assert
+      expect(result, equals(tTvSeriesSeason));
+    });
+
+    test('should throw Server Exception when the response code is 404 or other',
+        () async {
+      // arrange
+      when(mockHttpClient
+              .get(Uri.parse('$BASE_URL/tv/$tId/season/$tSeasonId?$API_KEY')))
+          .thenAnswer((_) async => http.Response('Not Found', 404));
+      // act
+      final call = dataSource.getTvSeriesSeasons(tId, tSeasonId);
       // assert
       expect(() => call, throwsA(isA<ServerException>()));
     });

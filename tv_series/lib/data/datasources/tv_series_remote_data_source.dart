@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:core/core.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
-import 'package:tv_series/data/models/tv_series_seasons_model.dart';
 import 'package:tv_series/tv_series.dart';
 
 abstract class TvSeriesRemoteDataSource {

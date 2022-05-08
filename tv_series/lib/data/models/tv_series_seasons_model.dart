@@ -37,7 +37,7 @@ class TvSeriesSeasonsModel extends Equatable {
   TvSeriesSeasons toEntity() {
     return TvSeriesSeasons(
       id: id,
-      episodes: episodes,
+      episodes: episodes.map((episode) => episode.toEntity()).toList(),
       name: name,
       overview: overview,
       seasonNumber: seasonNumber,
@@ -54,7 +54,8 @@ class TvSeriesSeasonsModel extends Equatable {
       ];
 }
 
-class Episode {
+// ignore: must_be_immutable
+class Episode extends Equatable {
   Episode({
     required this.episodeNumber,
     required this.id,
@@ -84,4 +85,17 @@ class Episode {
         "overview": overview,
         "season_number": seasonNumber,
       };
+
+  Episode toEntity() {
+    return Episode(
+        episodeNumber: episodeNumber,
+        id: id,
+        name: name,
+        overview: overview,
+        seasonNumber: seasonNumber);
+  }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [episodeNumber, id, name, overview, seasonNumber];
 }
